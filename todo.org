@@ -1,0 +1,41 @@
+* Hackathon Scenario
+** Concepts to Study In-Depth
+*** TODO Dynamic Programming
+*** TODO Greedy Algorithms
+*** TODO Graph Theory
+** Programming
+*** TODO 5.1
+*** TODO 6.1, 6.7
+*** TODO 7.1
+*** TODO 8.1
+*** TODO 9.1
+*** TODO 10.1
+*** TODO 11.1
+*** TODO 12.1
+*** TODO 13.1
+*** TODO 14.1
+*** TODO 15.1
+*** TODO 16.1
+*** TODO 17.1
+*** TODO 18.5
+*** TODO 19.1
+*** TODO 20.3
+*** TODO 21.11
+** Conceptual
+*** TODO 5.7
+*** TODO 6.12, 6.18
+*** TODO 7.2, 7.4
+*** TODO 8.2, 8.4
+*** TODO 9.9
+*** TODO 10.4
+*** TODO 11.4
+*** TODO 12.5, 12.9
+*** TODO 13.3, 13.4
+*** TODO 14.2
+*** TODO 15.3, 15.4
+*** TODO 16.2
+*** TODO 17.2
+*** TODO 18.7
+*** TODO 19.7
+*** TODO 20.7
+*** TODO 21.13
