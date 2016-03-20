@@ -39,12 +39,20 @@ class TestDutchFlagPartitioner < Test::Unit::TestCase
 
   def check(ar, i)
     check_brute(ar, i)
+    check_inplace(ar, i)
   end
 
   def check_brute(ar, i)
     part = DutchFlagPartitioner.new(ar, i)
     ai = ar[i]
     af = part.arrange_brute
+    assert_flag(af, ai)
+  end
+
+  def check_inplace(ar, i)
+    part = DutchFlagPartitioner.new(ar, i)
+    ai = ar[i]
+    af = part.arrange_inplace
     assert_flag(af, ai)
   end
 

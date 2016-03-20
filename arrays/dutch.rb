@@ -29,4 +29,25 @@ class DutchFlagPartitioner
     end
     a_lower + a_equal + a_upper
   end
+
+  # faster, smaller, in-place implementation
+  def arrange_inplace
+    ai = @a[@i]
+    smaller = 0
+    larger = @a.count
+    j = 0
+    while j < larger
+      if @a[j] < ai
+        @a[j], @a[smaller] = @a[smaller], @a[j]
+        j += 1
+        smaller += 1
+      elsif @a[j] == ai
+        j += 1
+      else
+        larger -= 1
+        @a[j], @a[larger] = @a[larger], @a[j]
+      end
+    end
+    @a
+  end
 end
