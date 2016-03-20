@@ -1,2 +1,7 @@
 Metrics/MethodLength:
   Max: 50
+
+# Even bbatsov agrees this should be disabled:
+# https://github.com/bbatsov/rubocop/issues/1238
+Style/Next:
+  Enabled: false
