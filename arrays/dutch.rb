@@ -16,13 +16,13 @@ class DutchFlagPartitioner
 
   def arrange_brute
     ai = @a[@i]
-    a_lower = []
-    a_upper = []
+    a_lower, a_upper, a_equal = [], [], []
     @a.each do |aa|
       if aa < ai then a_lower << aa
+      elsif aa == ai then a_equal << aa
       else a_upper << aa
       end
     end
-    a_lower + a_upper
+    a_lower + a_equal + a_upper
   end
 end
