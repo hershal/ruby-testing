@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
-## Take two linked lists, assume to be sorted, and return their merge. The only
-## field that you may change is the =next= field
+## Take two linked lists, assumed to be sorted, and return their merge. The only
+## field that you may change is the =next= field.
 
 # Encapsulates a linked list node, which contains numerical data as well as the
 # next node in the linked list.
