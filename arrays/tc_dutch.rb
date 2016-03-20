@@ -27,7 +27,6 @@ class TestDutchFlagPartitioner < Test::Unit::TestCase
     assert_brute(ar, i)
   end
 
-
   def assert_brute(ar, i)
     af = assemble_brute_flag(ar, i)
     assert(flag?(af, i), "#{af.inspect} not a flag")
