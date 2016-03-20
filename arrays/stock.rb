@@ -19,7 +19,6 @@ class StockProfitEstimator
     @prices.each_with_index do |e, i|
       (i..(@prices.count - 1)).each do |j|
         estimated_profit = @prices[j] - @prices[i]
-        puts [estimated_profit, i, j].inspect
         if estimated_profit > max_estimate
           max_estimate = estimated_profit
           max_i = i
