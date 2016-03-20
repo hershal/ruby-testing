@@ -9,6 +9,25 @@ class TestDutchFlagPartitioner < Test::Unit::TestCase
     assert_brute(ar, i)
   end
 
+  def test_multiple_equal
+    i = 1
+    ar = [9, 5, 1, 6, 3, 5]
+    assert_brute(ar, i)
+  end
+
+  def test_no_lower
+    i = 1
+    ar = [1, 5, 1, 2, 3, 4]
+    assert_brute(ar, i)
+  end
+
+  def test_no_higher
+    i = 1
+    ar = [7, 5, 8, 9, 10, 11]
+    assert_brute(ar, i)
+  end
+
+
   def assert_brute(ar, i)
     af = assemble_brute_flag(ar, i)
     assert(flag?(af, i), "#{af.inspect} not a flag")
