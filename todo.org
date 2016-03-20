@@ -9,7 +9,8 @@
 CLOSED: [2016-03-19 Sat 18:41]
 *** DONE 6.1, 6.7
 CLOSED: [2016-03-20 Sun 00:25]
-*** TODO 7.1
+*** DONE 7.1
+CLOSED: [2016-03-20 Sun 06:46]
 *** TODO 8.1
 *** TODO 9.1
 *** TODO 10.1
