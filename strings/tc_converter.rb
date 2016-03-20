@@ -1,4 +1,4 @@
-require_relative 'stoi'
+require_relative 'converter'
 require 'test/unit'
 
 # Tests the NumericString
