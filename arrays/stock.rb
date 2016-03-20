@@ -28,4 +28,15 @@ class StockProfitEstimator
     end
     max_estimate
   end
+
+  def estimate_faster
+    max_estimate = 0
+    min_price = Float::MAX
+    @prices.each do |price|
+      profit = price - min_price
+      min_price = [min_price, price].min
+      max_estimate = [max_estimate, profit].max
+    end
+    max_estimate
+  end
 end
