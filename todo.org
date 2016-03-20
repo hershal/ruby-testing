@@ -3,8 +3,10 @@
 *** TODO Dynamic Programming
 *** TODO Greedy Algorithms
 *** TODO Graph Theory
+*** TODO Intractability
 ** Programming
-*** TODO 5.1
+*** DONE 5.1
+CLOSED: [2016-03-19 Sat 18:41]
 *** TODO 6.1, 6.7
 *** TODO 7.1
 *** TODO 8.1
