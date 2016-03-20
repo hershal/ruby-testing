@@ -5,14 +5,10 @@
 
 # Converts a stringified number into its integer representation
 class NumericString
-  def initialize(str)
-    @str = str
-  end
-
-  def convert_brute
+  def stoi(str)
     num = 0
     negative = false
-    str_arr = @str.split(//)
+    str_arr = str.split(//)
     if str_arr[0] == '-'
       negative = true
       str_arr.shift

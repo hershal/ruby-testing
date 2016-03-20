@@ -52,8 +52,8 @@ class TestNumericString < Test::Unit::TestCase
   end
 
   def check(str, num)
-    converter = NumericString.new(str)
-    actual_num = converter.convert_brute
+    converter = NumericString.new
+    actual_num = converter.stoi(str)
     assert(actual_num == num, "#{num} ne #{actual_num}")
   end
 end
