@@ -3,9 +3,13 @@ require 'test/unit'
 
 # Tests the DutchFlagPartitioner
 class TestDutchFlagPartitioner < Test::Unit::TestCase
-  def test_brute_simple
+  def test_simple
     i = 1
     ar = [9, 5, 1, 6, 3]
+    assert_brute(ar, i)
+  end
+
+  def assert_brute(ar, i)
     af = assemble_brute_flag(ar, i)
     assert(flag?(af, i), "#{af.inspect} not a flag")
   end
