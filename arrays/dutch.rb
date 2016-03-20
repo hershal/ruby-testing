@@ -14,6 +14,8 @@ class DutchFlagPartitioner
     @i = i
   end
 
+  # brute-force implementation: Maintain three separate arrays containing the
+  # lower, upper, and equal elements. Combine these lists when done.
   def arrange_brute
     ai = @a[@i]
     a_lower = []
