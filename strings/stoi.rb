@@ -22,4 +22,23 @@ class NumericString
     end
     num = negative ? -num : num
   end
+
+  def itos(num)
+    negative = false
+    if num < 0
+      negative = true
+      num *= -1
+    end
+
+    zero = '0'.unpack('C')[0]
+    str_arr = []
+    exponent = Math.log(num, 10).floor
+
+    while num != 0
+      str_arr.push(zero + num % 10)
+      num /= 10
+    end
+    str = str_arr.pack(Array.new(exponent + 1, 'C').join('')).reverse
+    negative ? '-' + str : str
+  end
 end

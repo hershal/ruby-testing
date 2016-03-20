@@ -54,6 +54,8 @@ class TestNumericString < Test::Unit::TestCase
   def check(str, num)
     converter = NumericString.new
     actual_num = converter.stoi(str)
+    actual_str = converter.itos(num)
     assert(actual_num == num, "#{num} ne #{actual_num}")
+    assert(actual_str == num.to_s, "#{num.to_s} ne #{actual_str}")
   end
 end
