@@ -1,10 +1,10 @@
 #!/usr/bin/env ruby
 
-require_relative 'bintree'
+require_relative 'tc_common'
 require 'test/unit'
 
 # Tests the BinaryTree Add implementation
-class TestBinaryTreeAdd < Test::Unit::TestCase
+class TestBinaryTreeAdd < TestBinaryTree
   def test_simple_0
     arr = [2, 1, 3]
     check(arr, assemble(arr))
