@@ -47,6 +47,22 @@ class BinaryTree
       ((_height(root.left) - _height(root.right)).abs <= 1)
   end
 
+  def balanced?
+    _balanced?(@root)[0]
+  end
+
+  def _balanced?(root)
+    return [true, 0] if root.nil?
+
+    left_status = _balanced?(root.left)
+    right_status = _balanced?(root.right)
+    return [false, 0] if !left_status[0] || !right_status[0]
+
+    bal = (left_status[1] - right_status[1]).abs <= 1
+    hei = [left_status[1], right_status[1]].max + 1
+    [bal, hei]
+  end
+
   ## The height of a binary tree is the maximum depth of any node in that tree.
   ## The depth of a node excludes the node itself.
   def height
