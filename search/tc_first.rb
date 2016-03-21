@@ -3,6 +3,7 @@
 require_relative 'first'
 require 'test/unit'
 
+# Tests the my_find_index implementation
 class TestFindFirst < Test::Unit::TestCase
   def test_simple_0
     check([1, 2, 3, 3, 4, 5, 6], 3)

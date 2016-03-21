@@ -1,5 +1,4 @@
-## This Array extension takes a sorted array and a key and returns the index of
-## the /first/ occurrence of that key in the array.
+# My implementation of find_index.
 class Array
   def my_find_index(key)
     h = count - 1
