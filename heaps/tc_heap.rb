@@ -20,6 +20,11 @@ class TestMinHeap < Test::Unit::TestCase
     check(vals)
   end
 
+  def test_random
+    vals = Array.new(100) { rand(0..50) }
+    check(vals)
+  end
+
   def check(values)
     heap = MinHeap.new
     vals_added = []
