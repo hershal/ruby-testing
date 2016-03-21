@@ -55,7 +55,7 @@ class BinaryTree
 
   def _height(root)
     return 0 if root.nil?
-    [_height(root.left) + 1, _height(root.right) + 1].max
+    [_height(root.left), _height(root.right)].max + 1
   end
 
   def to_a
