@@ -1,4 +1,4 @@
-task default: ['test']
+task default: :test
 
 task :test do
   ruby 'arrays/ts_all.rb'
