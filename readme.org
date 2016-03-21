@@ -1,0 +1,4 @@
+* Ruby Testing
+[[https://travis-ci.org/hershal/ruby-testing][file:https://travis-ci.org/hershal/ruby-testing.svg?branch=master]]
+
+Just testin' out Ruby, yo!
