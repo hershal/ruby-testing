@@ -7,4 +7,5 @@ task :test do
   ruby 'stacks/ts_all.rb'
   ruby 'bintree/ts_all.rb'
   ruby 'heaps/ts_all.rb'
+  ruby 'search/ts_all.rb'
 end
