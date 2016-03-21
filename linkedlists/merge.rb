@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 require_relative('node')
 
 ## Take two linked lists, assumed to be sorted, and return their merge. The only

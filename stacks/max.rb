@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 ## Design a stack includes a =max= operation, in addition to =push= and =pop=.
 ## The =max= operation should return the maximum value stored in the stack.
 

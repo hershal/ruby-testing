@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 ## Take a string representing an integer and return the corresponding integer
 ## and vice versa. Negative integers should be handled.
 
