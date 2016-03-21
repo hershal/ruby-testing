@@ -37,13 +37,13 @@ class BinaryTree
   ## difference in the height of its left and right of subtrees is at most one.
   ## A perfect binary tree is balanced, as is a complete binary tree. This
   ## checks whether the tree is balanced.
-  def balanced?
-    _balanced?(@root)
+  def balanced_brute?
+    _balanced_brute?(@root)
   end
 
-  def _balanced?(root)
+  def _balanced_brute?(root)
     return true if root.nil?
-    _balanced?(root.left) && _balanced?(root.right) &&
+    _balanced_brute?(root.left) && _balanced_brute?(root.right) &&
       ((_height(root.left) - _height(root.right)).abs <= 1)
   end
 

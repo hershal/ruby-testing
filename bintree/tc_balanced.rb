@@ -36,7 +36,7 @@ class TestBinaryTreeBalanced < TestBinaryTree
   end
 
   def check(expected, tree)
-    actual = tree.balanced?
+    actual = tree.balanced_brute?
     assert(expected == actual,
            "#{expected} ne #{actual}. Tree: #{tree.to_a.inspect}")
   end
