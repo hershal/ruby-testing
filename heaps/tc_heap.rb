@@ -21,8 +21,10 @@ class TestMinHeap < Test::Unit::TestCase
   end
 
   def test_random
-    vals = Array.new(100) { rand(0..50) }
-    check(vals)
+    10.times do
+      vals = Array.new(100) { rand(0..50) }
+      check(vals)
+    end
   end
 
   def check(values)
