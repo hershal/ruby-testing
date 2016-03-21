@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 # A sorted binary tree which contains a reference to the root of the tree and
 # algorithms to operate on the tree.
 class BinaryTree
