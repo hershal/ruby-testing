@@ -33,6 +33,17 @@ class BinaryTree
     end
   end
 
+  ## The height of a binary tree is the maximum depth of any node in that tree.
+  ## The depth of a node excludes the node itself.
+  def height
+    _height(@root) - 1
+  end
+
+  def _height(root)
+    return 0 if root.nil?
+    [_height(root.left) + 1, _height(root.right) + 1].max
+  end
+
   def to_a
     _to_a(@root)
   end
