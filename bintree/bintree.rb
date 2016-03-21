@@ -33,6 +33,20 @@ class BinaryTree
     end
   end
 
+  ## A binary tree is said to be balanced if for each node in the tree, the
+  ## difference in the height of its left and right of subtrees is at most one.
+  ## A perfect binary tree is balanced, as is a complete binary tree. This
+  ## checks whether the tree is balanced.
+  def balanced?
+    _balanced?(@root)
+  end
+
+  def _balanced?(root)
+    return true if root.nil?
+    _balanced?(root.left) && _balanced?(root.right) &&
+      ((_height(root.left) - _height(root.right)).abs <= 1)
+  end
+
   ## The height of a binary tree is the maximum depth of any node in that tree.
   ## The depth of a node excludes the node itself.
   def height
