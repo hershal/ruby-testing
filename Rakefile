@@ -6,4 +6,5 @@ task :test do
   ruby 'linkedlists/ts_all.rb'
   ruby 'stacks/ts_all.rb'
   ruby 'bintree/ts_all.rb'
+  ruby 'heaps/ts_all.rb'
 end
