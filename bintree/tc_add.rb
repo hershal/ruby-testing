@@ -15,14 +15,6 @@ class TestBinaryTreeAdd < TestBinaryTree
     check(arr, assemble(arr))
   end
 
-  def assemble(data)
-    tree = BinaryTree.new
-    data.each do |e|
-      tree.add(e)
-    end
-    tree
-  end
-
   def check(arr, tree)
     expected = arr.sort
     actual = tree.to_a
