@@ -19,7 +19,7 @@ class MinHeap
     idx = @elements.count - 1
     until idx == 0
       cur = @elements[idx]
-      bck_idx = back(idx)
+      bck_idx = _back(idx)
       bck = @elements[bck_idx]
       if cur < bck
         @elements[idx] = bck
@@ -33,8 +33,8 @@ class MinHeap
     m = @elements.shift
     i = 0
     loop do
-      li = left(i)
-      ri = right(i)
+      li = _left(i)
+      ri = _right(i)
       break if (li.nil? && ri.nil?) || i > @elements.count
       if !li.nil? && @elements[li] < @elements[i]
         @elements[i], @elements[li] = @elements[li], @elements[i]
@@ -51,19 +51,19 @@ class MinHeap
     @elements[0]
   end
 
-  def left(i)
+  def _left(i)
     l = (2 * i) + 1
     return nil if l >= @elements.count
     l
   end
 
-  def right(i)
+  def _right(i)
     r = (2 * i) + 2
     return nil if r >= @elements.count
     r
   end
 
-  def back(i)
+  def _back(i)
     return (i / 2) - 1 if i.even?
     (i / 2).to_int
   end
