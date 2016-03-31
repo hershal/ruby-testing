@@ -27,6 +27,7 @@ class TestBinaryTreeHeight < TestBinaryTree
 
   def check(expected, tree)
     actual = tree.height
-    assert(expected == actual, "#{expected} ne #{actual}. Tree: #{tree.to_a.inspect}")
+    assert(expected == actual,
+           "#{expected} ne #{actual}. Tree: #{tree.to_a.inspect}")
   end
 end
