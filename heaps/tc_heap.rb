@@ -38,7 +38,7 @@ class TestMinHeap < Test::Unit::TestCase
 
     until heap.empty?
       pop_expect = vals_added.min
-      pop_actual = heap.pop
+      pop_actual = heap.delete_min
       assert(pop_expect == pop_actual, "#{pop_expect} ne #{pop_actual}, #{heap}")
       vals_added.delete_at(vals_added.find_index(pop_expect))
       explicit_check(vals_added, heap)

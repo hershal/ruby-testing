@@ -29,7 +29,7 @@ class MinHeap
     end
   end
 
-  def pop
+  def delete_min
     m = @elements.shift
     i = 0
     loop do
