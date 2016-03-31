@@ -1,6 +1,6 @@
 ## Dijkstra testing
 
-require 'priority_queue'
+require_relative '../heaps/heap'
 
 # Represents a graph structure. Graph importing is done with the following
 # structure: {'a' {'b' => 1}, 'b' => {'a' => 1}}.
@@ -22,17 +22,17 @@ class Graph
 
   # From name_a to name_b
   def shortest_path(start)
-    visit_queue = PriorityQueue.new
+    visit_queue = MinHeap.new
 
     # holds name => dist pairs
     dists = {}
     parents = {}
 
     # holds Node => curr_dist pairs
-    visit_queue.push(get_node(start), 0)
+    visit_queue.add(DijkstraPath.new(get_node(start), 0))
 
     until visit_queue.empty?
-      u, dist = visit_queue.delete_min
+      u, dist = visit_queue.delete_min.pair
       u.visit
 
       u.adjacents.each do |v_name, w|
@@ -44,12 +44,12 @@ class Graph
         if dists[v_name].nil? || new_dist < dists[v_name]
           dists[v_name] = new_dist
           parents[v_name] = u.name
-          visit_queue.push(v, new_dist) unless v.visited?
+          visit_queue.add(DijkstraPath.new(v, new_dist)) unless v.visited?
         end
       end
     end
 
-    zip_dicts(dists, parents)
+    zip_dicts(parents, dists)
   end
 end
 
@@ -77,7 +77,7 @@ class Node
   def initialize(name, adjs)
     @name = name
     @visited = false
-    @adjacents = PriorityQueue.new
+    @adjacents = {}
     adjs.each do |k, v|
       @adjacents[k] = v
     end
@@ -93,5 +93,24 @@ class Node
 
   def visit
     @visited = true
+  end
+end
+
+# Encapsulates a specific Dijkstra path pair, to facilitate usage of preexisting
+# min-heaps for the algorithm
+class DijkstraPath
+  include Comparable
+  attr_reader :node, :curr_weight
+  def initialize(node, curr_weight)
+    @node = node
+    @curr_weight = curr_weight
+  end
+
+  def <=>(other)
+    @curr_weight <=> other.curr_weight
+  end
+
+  def pair
+    [@node, @curr_weight]
   end
 end
