@@ -8,4 +8,5 @@ task :test do
   ruby 'bintree/ts_all.rb'
   ruby 'heaps/ts_all.rb'
   ruby 'search/ts_all.rb'
+  ruby 'dijkstra/ts_all.rb'
 end
